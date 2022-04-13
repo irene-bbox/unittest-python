@@ -1,12 +1,13 @@
 # Python Unit Tests
 
-### Getting started
+## Getting started
 #### Structure
 We will use the Python built-in moddule `unittest` to practice writing simple unit tests in Python.
-> :warning: The correct structure of an assert statement is `assertSomething(a, b, msg='my Custom error message')`, where
+> :warning: The correct structure of an assert statement is `assertSomething(a, b, msg='custom message')`, where
 * `a` the value you're testing
 * `b` the expected value
 * `msg` a custom error message to be returned if the test fails
+  
 All the assert methods accept a *msg* argument that, if specified, is used as the error message on failure
 
 #### Example
@@ -22,7 +23,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-### Test Runner :electric_plug: :snail: :computer:
+#### Test Runner :electric_plug: :snail: :computer:
 There are many ways to execute unit tests. Assume you named your test file \texttt{test.py}. In command line, run:
  - `python test.py` executes the test runner by discovering all classes in this file that inherit from *unittest.TestCase*. If you have a single test file named *test.py*, calling `python test.py` is a great way to get started.
  - `python -m unittest test` executes the same test module (called *test*) via the command line
@@ -33,7 +34,7 @@ There are many ways to execute unit tests. Assume you named your test file \text
 ### Most Commonly Used Methods 
 
 | Method | Checks that | Checks for |
-|:-:|:-:|:-:|
+|:-|:-|:-:|
 | assertEqual(a, b) | `a == b` | **equality** |
 | assertNotEqual(a, b) | `a != b` | |
 | assertTrue(x) | `bool(x)` is `True` | **truth** |
@@ -50,18 +51,18 @@ There are many ways to execute unit tests. Assume you named your test file \text
 ### Methods for Specific Checks 
 
 | Method | Checks that | Checks for |
-|:-:|:-:|:-:|
+|:-|:-|:-:|
 | assertAlmostEqual(a, b,\ places=7, msg=None, delta=None) | `a ~ b` | **equality** |
 | assertGreater(a, b) | `a > b` | **value size** |
 | assertGreaterEqual(a, b) | `a >= b` | |
 | assertLess(a, b) | `a < b` | |
 | assertLessEqual(a, b) | `a <= b` | |
 | assertRegex(test, regex, msg=None) | `r.search(s)` | **coincidence** |
-| assertCountEqual(a, b) | a and b have the same elements\ in the same number, regardless of\ their order. | **similarity** |
+| assertCountEqual(a, b) | a and b have the same/elements in the same number,/regardless of their order. | **similarity** |
 
 ### Methods for Exceptions, Warnings, Log messages 
 
 | Method | Checks that | Checks for |
-|:-:|:-:|:-:|
+|:-|:-|:-:|
 | assertRaises(exception, callable, *args, **kwds, msg=None) | `fun(*args, **kwds)` raises exc | **exceptions** |
 
