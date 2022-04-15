@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
 #### Test Runner :electric_plug: :snail: :computer:
 There are many ways to execute unit tests. Assume you named your test file *test.py*. In command line, run:
- - `python test.py` executes the test runner by discovering all classes in this file that inherit from *unittest.TestCase*. If you have a single test file named *test.py*, calling `python test.py` is a great way to get started.
+ - `python test.py` executes the test runner by discovering all classes in this file that inherit from *unittest.TestCase*. If you have a single test file named *test.py*, calling `python test.py` is a great way to get started. Add the flag `-v` to get a more descriptive output.
  - `python -m unittest test` executes the same test module (called *test*) via the command line
  - `python -m unittest -v test` you can add flag, like `-v` for *verbose* to return more descriptive outputs
  - `python -m unittest discover` also executes via the *unittest* command line with one difference: instead of providing the name of a module containing tests, request an auto-discovery

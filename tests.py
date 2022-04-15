@@ -2,7 +2,6 @@ from functions import volume_cylinder
 import unittest
 
 
-
 # This is a 'test case' subclassing multiple individual tests
 class TestFunc(unittest.TestCase):
 
@@ -48,7 +47,7 @@ class TestFunc(unittest.TestCase):
         # - passes the test if the expected exception is raised
         # - it returns an error if another exception is raised
         # - fails the test if no exception is raised
-        
+
         # with self.assertRaises(ValueError):
         #     volume_cylinder(2, str) 
         # |--> this returns an ERROR, beause it's raising a TypeError, instead of the expected ValueError
@@ -60,10 +59,11 @@ class TestFunc(unittest.TestCase):
         # ensure 2 sequences contain the same elements regardless of their order
         self.assertCountEqual([1,2,True,'hello'], ['hello',2,1,True], 'ERROR: lists are different')
 
+        # test out assertRegex
+        self.assertRegex('abc', 'a') # pass
+        self.assertRegex('abc', 'B') # fail
+        self.assertRegex('abc', 'c') # pass
+        self.assertRegex('abc', 'd') # fail
+
 if __name__ == '__main__':
     unittest.main()
-
-
-
-
-
