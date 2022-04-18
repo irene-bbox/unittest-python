@@ -3,6 +3,7 @@
 ## Getting started
 #### Structure
 We will use the Python built-in moddule `unittest` to practice writing simple unit tests in Python.
+
 :warning: The correct structure of an assert statement is `assertSomething(a, b, msg='custom message')`, where
 * `a` the value you're testing
 * `b` the expected value
@@ -58,11 +59,11 @@ There are many ways to execute unit tests. Assume you named your test file *test
 | assertLess(a, b) | `a < b` | |
 | assertLessEqual(a, b) | `a <= b` | |
 | assertRegex(test, regex, msg=None) | `r.search(s)` | **coincidence** |
-| assertCountEqual(a, b) | a and b have the same elements in the same number, regardless of their order. | **similarity** |
+| assertCountEqual(a, b) | a and b have the same <br\> elements in the same number, <br\> regardless of their order. | **similarity** |
 
 #### Exceptions, Warnings, Log messages 
 
 | Method | Checks that | Checks for |
 |:-|:-|:-:|
-| assertRaises(exception, callable, *args, **kwds, msg=None) | `fun(*args, **kwds)` raises exc | **exceptions** |
+| assertRaises(exception, callable, <br/> *args, **kwds, msg=None) | `fun(*args, **kwds)` raises exc | **exceptions** |
 
