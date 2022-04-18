@@ -53,7 +53,7 @@ There are many ways to execute unit tests. Assume you named your test file *test
 
 | Method | Checks that | Checks for |
 |:-|:-|:-:|
-| assertAlmostEqual(a, b, places=7, msg=None, delta=None) | `a ~ b` | **equality** |
+| assertAlmostEqual(a, b, places=7, <br/> msg=None, delta=None) | `a ~ b` | **equality** |
 | assertGreater(a, b) | `a > b` | **value size** |
 | assertGreaterEqual(a, b) | `a >= b` | |
 | assertLess(a, b) | `a < b` | |
