@@ -59,7 +59,7 @@ There are many ways to execute unit tests. Assume you named your test file *test
 | assertLess(a, b) | `a < b` | |
 | assertLessEqual(a, b) | `a <= b` | |
 | assertRegex(test, regex, msg=None) | `r.search(s)` | **coincidence** |
-| assertCountEqual(a, b) | a and b have the same <br\> elements in the same number, <br\> regardless of their order. | **similarity** |
+| assertCountEqual(a, b) | a and b have the same <br/> elements in the same number, <br/> regardless of their order. | **similarity** |
 
 #### Exceptions, Warnings, Log messages 
 
