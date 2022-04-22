@@ -67,3 +67,10 @@ There are many ways to execute unit tests. Assume you named your test file *test
 |:-|:-|:-:|
 | assertRaises(exception, callable, <br/> *args, **kwds, msg=None) | `fun(*args, **kwds)` raises exc | **exceptions** |
 
+
+## Outputs
+
+A Python unit test always returns one of 3 possible outcomes:
+* `success` --> the tested code passed all tests
+* `failure` --> some of the tested code faield to pass the test
+* `error` --> the testing code broke somewhere, an exception was raised, and the tests could not be executed properly. 
