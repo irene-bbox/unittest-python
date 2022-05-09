@@ -30,6 +30,8 @@ class TestFunc(unittest.TestCase):
         # # check for identity: it should output a 0.0 float - I DON'T UNDERSTAND THIS ASSERT METHOD JUST YET!
         # self.assertIs(volume_cylinder(8, 0), 0.0, 'ERROR: not same object')
 
+
+    def test_volume_as_expected(self):
         # ensure the volume is as expected for some test values of radius and height
         self.assertEqual(volume_cylinder(2, 2), 25.12, 'ERROR: volume mismatch')
         self.assertAlmostEqual(round(volume_cylinder(3, 5), 2), 141.3) # call round() to make it equal
@@ -37,6 +39,11 @@ class TestFunc(unittest.TestCase):
         self.assertNotAlmostEqual(volume_cylinder(3, 5), 141.33, places=2) 
         self.assertAlmostEqual(volume_cylinder(3, 5), 141.25, delta=0.6) # define max allowed delta
 
+        # ensure 2 sequences contain the same elements regardless of their order
+        self.assertCountEqual([1,2,True,'hello'], ['hello',2,1,True], 'ERROR: lists are different')
+
+
+    def test_with_AssertRaises(self):
         # ensure the input param are of type int OR float and nothing else. 
         self.assertIsInstance(volume_cylinder(3, 5), float, 'ERROR: output volume is not a float')
         # ensure it raises an error when passing a string
@@ -55,9 +62,6 @@ class TestFunc(unittest.TestCase):
         # ensure the functions handles 'string' input parameters by raising an exception
         # the test is passed if the function 'volume_cylinder' raises exceptions
         self.assertRaises(TypeError, volume_cylinder, str) 
-
-        # ensure 2 sequences contain the same elements regardless of their order
-        self.assertCountEqual([1,2,True,'hello'], ['hello',2,1,True], 'ERROR: lists are different')
 
         # test out assertRegex
         self.assertRegex('abc', 'a') # pass
