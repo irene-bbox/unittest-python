@@ -72,5 +72,5 @@ There are many ways to execute unit tests. Assume you named your test file *test
 
 A Python unit test always returns one of 3 possible outcomes:
 * `success` --> the tested code passed all tests
-* `failure` --> some of the tested code faield to pass the test
+* `failure` --> some of the tested code failed to pass the test
 * `error` --> the testing code broke somewhere, an exception was raised, and the tests could not be executed properly. 
