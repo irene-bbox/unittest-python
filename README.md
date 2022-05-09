@@ -2,7 +2,7 @@
 
 ## Getting started
 #### Structure
-We will use the Python built-in moddule `unittest` to practice writing simple unit tests in Python.
+We will use the Python built-in module `unittest` to practice writing simple unit tests in Python.
 
 :warning: The correct structure of an assert statement is `assertSomething(a, b, msg='custom message')`, where
 * `a` the value you're testing
