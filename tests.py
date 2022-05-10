@@ -61,13 +61,13 @@ class TestFunc(unittest.TestCase):
 
         # ensure the functions handles 'string' input parameters by raising an exception
         # the test is passed if the function 'volume_cylinder' raises exceptions
-        self.assertRaises(TypeError, volume_cylinder, str) 
+        self.assertRaises(TypeError, volume_cylinder, str, 'my error message') 
 
         # test out assertRegex
         self.assertRegex('abc', 'a') # pass
-        self.assertRegex('abc', 'B') # fail
+        self.assertRegex('abc', 'b') # fail
         self.assertRegex('abc', 'c') # pass
-        self.assertRegex('abc', 'd') # fail
+        self.assertRegex('abc', 'd', 'my error message') # fail
 
 if __name__ == '__main__':
     unittest.main()
